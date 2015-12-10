@@ -1,5 +1,6 @@
-<template name = "home">
-	{{#each products}}
+<template name = "category">
+	<h3> Products </h3>
+	{{#each category}}
 		<div class = "row product-row" >
 		<div class = "col-md-2">
 			<img class = "full" src = "{{image}}">
@@ -13,6 +14,6 @@
 		</div>
 	</div>
 	{{else}}
-		<p> There are no products </p>
+		<p> There are no products in this category </p>
 	{{/each}}
 </template>

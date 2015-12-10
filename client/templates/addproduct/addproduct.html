@@ -1,6 +1,6 @@
 <template name = "addproduct">
 	<h3> Add Product </h3>
-	<form class = "add_product" enctype = "multiparts/form-data">
+	<form class = "addproduct" enctype = "multipart/form-data">
 		<div class = "form-group">
 			<label>Name</label>
 			<input type ="text" name = "name" class = "form-control" placeholder="Product Name">
@@ -15,12 +15,12 @@
 			</select>
 		</div>
 			<div class = "form-group">
-				<label> Product Image</label>
-				<input type ="file" name = "productImage" id="form-control">
+				<label>Product Image</label>
+				<input type ="file" name="productImage" id = "productImage">
 			</div>
 			<div class = "form-group">
-				<label> Description</label>
-				<textarea type ="text" class="form-control"></textarea>
+				<label>Description</label>
+				<textarea name ="description" class="form-control"></textarea>
 			</div>
 			<div class = "form-group">
 				<label>Featured</label>
