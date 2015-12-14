@@ -7,10 +7,10 @@
 		</div>
 		<div class = "col-md-10">
 			<h4> {{name}}</h4>
-			<p> Average Rating: Rating</p>
-			<p> {{truncateText description 150}}</p>
-			<a href = "https://localhost:3000/products" class = "btn btn-default"> Read Reviews</a> 
-			<a href = "https://locathost:3000/newReview" class = "btn btn-primary"> Add Review </a>
+			<p> Average Rating: : <img class = 'stars' src = '/img/star{{getAvg reviews}}.png'> ({{getReviewsTotal reviews.length}})</p>
+			<p> {{description}}</p>
+			<a href = "/products/{{_id}}" class = "btn btn-default"> Read Reviews</a> 
+			<a href = "/newReview/{{_id}}" class = "btn btn-primary"> Add Review </a>
 		</div>
 	</div>
 	{{else}}
