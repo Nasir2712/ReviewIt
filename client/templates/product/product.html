@@ -10,6 +10,7 @@
 			<p> {{description}}</p>
 		</div>
 	</div>
+	{{#if currentUser}}
 	<div class="row">
 		<div class="col-md-12">
 			<div class="text-right">
@@ -18,6 +19,7 @@
 		</div>
 	</div>
 	<hr>
+	{{/if}}
 	<h4> Reviews & Ratings </h4>
 	{{#each reviews}}
 	<div class = 'row'>
@@ -25,7 +27,7 @@
 			<img class = 'stars' src = "/img/star{{rating}}.png"> {{body}}
 		</div>
 		<div class = 'col-md-2'>
-			{{review_date}}
+			{{formatDate review_date}}
 		</div>
 	</div>
 	<br>

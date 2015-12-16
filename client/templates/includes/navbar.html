@@ -14,8 +14,13 @@
           <ul class="nav navbar-nav">
             <li><a href="http://localhost:3000/home">Home</a></li>
             <li><a href="http://localhost:3000/products">Products</a></li>
+            {{#if currentUser}}
             <li><a href="http://localhost:3000/addproduct">Add Product</a></li>
-          </ul>
+          {{/if}}
+        </ul>
+          <ul class = "nav navbar-nav navbar-right">
+              {{> loginButtons}}
+            </ul> 
         </div><!--/.nav-collapse -->
       </div>
     </nav>
