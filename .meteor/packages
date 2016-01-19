@@ -24,3 +24,8 @@ cfs:gridfs
 momentjs:moment
 accounts-password
 ian:accounts-ui-bootstrap-3
+cfs:http-methods
+cfs:http-publish
+cfs:access-point
+cfs:base-package
+cfs:storage-adapter

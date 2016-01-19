@@ -1,11 +1,11 @@
 Meteor.methods({
-	addProduct: function(file,name,category,description,is_featured) {
-		if(file){
-			fsFile = new FS.File(file);
+	addProduct: function(productImage,name,category,description,is_featured) {
+		if(productImage){
+			// fsFile = new FS.File(file);
 
-			ProductImages.insert(fsFile, function(err, result){
-				if(!err){
-					var productImage = '/cfs/files/ProductImages/'+result._id;
+			// ProductImages.insert(fsFile, function(err, result){
+			// 	if(!err){
+			// 		var productImage = '/cfs/files/ProductImages/'+result._id;
 
 					Products.insert({
 						name: name,
@@ -15,8 +15,8 @@ Meteor.methods({
 						image: productImage,
 						createdAt: new Date()
 					});
-				}
-			});
+			// 	}
+			// });
 		} else {
 			var productImage = '/img/noimage.png';
 

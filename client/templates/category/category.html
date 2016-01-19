@@ -1,6 +1,28 @@
 <template name = "category">
-	<h3> Products </h3>
+	{{Products}}
 	{{#each category}}
+                <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img class = "image" src="{{image}}" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">$649.99</h4>
+                                <h4>{{truncateText name 50}}</h4>
+                                <p>{{description}}</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">{{getReviewsTotal reviews.length}} reviews</p>
+                                <p><img class = 'stars' src = '/img/star{{getAvg reviews}}.png'></p>
+                                <a href = "/products/{{_id}}" class = "btn btn-default"> Read </a> 
+                                {{#if currentUser}} 
+                                <a href = "/newReview/{{_id}}" class = "btn btn-primary pull-right"> Add Review </a>
+                                {{/if}}
+                            </div>
+                        </div>
+                    </div>
+                    {{else}}
+                    <p> There are no products </p>
+                    {{/each}}
+<!--	{{#each category}}
 		<div class = "row product-row" >
 		<div class = "col-md-2">
 			<img class = "full" src = "{{image}}">
@@ -17,5 +39,5 @@
 	</div>
 	{{else}}
 		<p> There are no products in this category </p>
-	{{/each}}
+	{{/each}} -->
 </template>

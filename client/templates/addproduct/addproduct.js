@@ -7,8 +7,12 @@ Template.addproduct.events({
 		var is_featured = event.target.is_featured.value;
 
 		var file = $('#productImage').get(0).files[0];
+		var fsFile = new FS.File(file);
 
-		Meteor.call('addProduct', file, name, category, description, is_featured);
+		ProductImages.insert(fsFile, function(err, result){
+			var productImage = '/cfs/files/ProductImages/'+result._id;
+			Meteor.call('addProduct', productImage, name, category, description, is_featured);
+		});
 
 		// Clear form
 	    event.target.name.value = "";

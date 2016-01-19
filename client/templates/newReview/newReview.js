@@ -6,7 +6,7 @@ Template.newReview.events({
 		 Meteor.call('addReview', this._id, rating, body);
 
          FlashMessages.sendSuccess('Review Added');
-         Router.go('/home');
+         Router.go('/products');
 
          return false;     
 	}
