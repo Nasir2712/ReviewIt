@@ -1,13 +1,7 @@
 Meteor.methods({
 	addProduct: function(productImage,name,category,description,is_featured) {
 		if(productImage){
-			// fsFile = new FS.File(file);
-
-			// ProductImages.insert(fsFile, function(err, result){
-			// 	if(!err){
-			// 		var productImage = '/cfs/files/ProductImages/'+result._id;
-
-					Products.insert({
+			Products.insert({
 						name: name,
 						category: category,
 						description: description,
@@ -15,8 +9,6 @@ Meteor.methods({
 						image: productImage,
 						createdAt: new Date()
 					});
-			// 	}
-			// });
 		} else {
 			var productImage = '/img/noimage.png';
 
