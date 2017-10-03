@@ -7,4 +7,3 @@ The average rating and the number of reviews is then displayed with the product.
 Front-End is using bootstrap and back-end is mongo collections.
 
 This project was made in A100 to stretch my meteor skills further.
-The next step for this project is to work on front-end and to remove a bug i.e uploading an image.
